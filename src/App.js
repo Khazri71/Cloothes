@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import Home from "./components/Home";
+import Header from "./components/Header";
+import Products from "./components/Products";
+import About from "./components/About";
+import NotFound from "./components/NotFound";
+import CartProvider from "./context/CartContext";
+import ProductsCart from "./components/ProductsCart";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CartProvider>
+        <Header />
+        {/* Routes  */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/cart" element={<ProductsCart />} />
+        </Routes>
+      </CartProvider>
+    </>
   );
 }
 

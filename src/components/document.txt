@@ -1,0 +1,26 @@
+--NOTES--
+
+
+
+--ROADMAP--
+1--Install Outils :
+  — React Router Dom
+  — Bootstrap5
+  — React Fontawesome 6
+2-- Create Template UI
+  - Create Routes Link
+  - Create Header
+  - Create Home Page
+  - Create Products Page
+  - Create About Page
+  - Create Cart
+3-- Get API of Fake Store and Fetch it with Axios
+4-- Create Context API
+5-- Create Functions :
+    == incrementCartProductQuantity
+    == decrementCartProductQuantity 
+    == removeFromCart
+    == TotalPrice
+    
+    
+
